@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #e91e63;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header .logo {
+  max-width: 100%;
+  height: auto;
+}
+header h1 {
+  margin-top: 10px;
+}
+
+nav {
+  background-color: #ff9800;
+  padding: 10px 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+}
+nav a:hover {
+  background-color: #cc7a00;
+}
+
+main {
+  padding: 20px;
+}
+main .banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background: url("../img/banner.jpg") no-repeat center center;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+main .textos h1 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #e91e63;
+}
+main .textos p {
+  margin-bottom: 10px;
+}
+main .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main .img div {
+  text-align: center;
+}
+main .img div img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+main .img div h3 {
+  font-size: 1.5rem;
+  color: #ff9800;
+}
+main .contacto {
+  text-align: center;
+  margin-top: 20px;
+}
+main .contacto a {
+  color: #e91e63;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border: 2px solid #e91e63;
+  border-radius: 5px;
+}
+main .contacto a:hover {
+  background-color: #e91e63;
+  color: white;
+}
+main .product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main .product-grid .product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+}
+main .product-grid .product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+main .product-grid .product h3 {
+  font-size: 1.5rem;
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+main .product-grid .product p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+main .product-grid .product .purchase-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+main .product-grid .product .purchase-options .quantity-input {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+}
+main .product-grid .product .purchase-options .buy-button {
+  background-color: #e91e63;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+main .product-grid .product .purchase-options .buy-button:hover {
+  background-color: #c1134e;
+}
+
+footer {
+  background-color: #e91e63;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,191 @@
+// Variables
+$primary-color: #e91e63; // Rosa
+$secondary-color: #ff9800; // Naranja
+$background-color: #f5f5f5;
+$font-stack: 'Arial', sans-serif;
+$banner-height: 300px;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid-layout($columns, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+    gap: $gap;
+}
+
+// styles
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-stack;
+    background-color: $background-color;
+}
+
+// Header styles
+header {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+    .logo {
+        max-width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        margin-top: 10px;
+    }
+}
+
+// Nav styles
+nav {
+    background-color: $secondary-color;
+    padding: 10px 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+}
+
+// Main contenido styles
+main {
+    padding: 20px;
+
+    .banner {
+        @include flex-center;
+        height: $banner-height;
+        background: url('../img/banner.jpg') no-repeat center center;
+        background-size: cover;
+        margin-bottom: 20px;
+    }
+
+    .textos {
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+            color: $primary-color;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+    }
+
+    .img {
+        @include flex-center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        div {
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .contacto {
+        text-align: center;
+        margin-top: 20px;
+
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border: 2px solid $primary-color;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: $primary-color;
+                color: white;
+            }
+        }
+    }
+
+    .product-grid {
+        @include grid-layout(3, 20px);
+
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 1.5rem;
+                color: $primary-color;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            .purchase-options {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                .quantity-input {
+                    width: 50px;
+                    padding: 5px;
+                    text-align: center;
+                }
+
+                .buy-button {
+                    background-color: $primary-color;
+                    color: white;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+
+              &:hover {
+                        background-color: darken($primary-color, 10%);
+                }
+                }
+            }
+        }
+    }
+}
+
+// Footer styles
+footer {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
